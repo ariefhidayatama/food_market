@@ -93,7 +93,9 @@ class _SignInPageState extends State<SignInPage> {
             child: isLoading
                 ? SpinKitFadingCircle(size: 45, color: mainColor)
                 : RaisedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Get.to(SignUpPage());
+                    },
                     elevation: 0,
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(8)),

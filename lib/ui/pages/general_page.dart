@@ -31,7 +31,7 @@ class GeneralPage extends StatelessWidget {
                 Column(
                   children: [
                     Container(
-                      // margin: EdgeInsets.only(bottom: defaultMargin),                      
+                      // margin: EdgeInsets.only(bottom: defaultMargin),
                       padding: EdgeInsets.symmetric(horizontal: defaultMargin),
                       width: double.infinity,
                       height: 50,
@@ -39,14 +39,21 @@ class GeneralPage extends StatelessWidget {
                       child: Row(
                         children: [
                           onBackButtonPressed != null
-                              ? Container(
-                                  width: 15,
-                                  height: 15,
-                                  margin: EdgeInsets.only(right: 20),
-                                  decoration: BoxDecoration(
-                                      image: DecorationImage(
-                                          image: AssetImage(
-                                              'assets/back_arrow.png'))),
+                              ? GestureDetector(
+                                  onTap: () {
+                                    if (onBackButtonPressed != null) {
+                                      onBackButtonPressed();
+                                    }
+                                  },
+                                  child: Container(
+                                    width: 15,
+                                    height: 15,
+                                    margin: EdgeInsets.only(right: 20),
+                                    decoration: BoxDecoration(
+                                        image: DecorationImage(
+                                            image: AssetImage(
+                                                'assets/back_arrow.png'))),
+                                  ),
                                 )
                               : SizedBox(),
                           Column(
