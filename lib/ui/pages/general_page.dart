@@ -32,7 +32,7 @@ class GeneralPage extends StatelessWidget {
                   children: [
                     Container(
                       // margin: EdgeInsets.only(bottom: defaultMargin),                      
-                      // padding: EdgeInsets.symmetric(horizontal: defaultMargin),
+                      padding: EdgeInsets.symmetric(horizontal: defaultMargin),
                       width: double.infinity,
                       height: 50,
                       color: Colors.white,
