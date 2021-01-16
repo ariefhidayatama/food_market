@@ -45,7 +45,7 @@ class _FoodPageState extends State<FoodPage> {
                                 fit: BoxFit.cover)))
                   ])),
           // List of Food
-          FoodCard(),
+          FoodCard(mockFood),
           // List of Food (Tabs)
         ])
       ],

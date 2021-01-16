@@ -7,6 +7,7 @@ import 'package:food_market/ui/widgets/widgets.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:supercharged/supercharged.dart';
+import 'package:food_market/models/models.dart';
 
 part 'general_page.dart';
 part 'sign_in_page.dart';
