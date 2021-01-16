@@ -6,6 +6,8 @@ class FoodPage extends StatefulWidget {
 }
 
 class _FoodPageState extends State<FoodPage> {
+  int selectedIndex = 0;
+
   @override
   Widget build(BuildContext context) {
     return ListView(
@@ -62,8 +64,39 @@ class _FoodPageState extends State<FoodPage> {
                     .toList(),
               )
             ]),
-          )
+          ),
           // List of Food (Tabs)
+          Container(
+            width: double.infinity,
+            color: Colors.white,
+            child: Column(
+              children: [
+                CustomTabBar(
+                  title: ['New Tate', 'Popular', 'Recommended'],
+                  selectedIndex: selectedIndex,
+                  onTap: (index) {
+                    setState(() {
+                      selectedIndex = index;
+                    });
+                  },
+                ),
+                SizedBox(
+                  height: 15,
+                ),
+                Builder(builder: (_) {
+                  String body = (selectedIndex == 0)
+                      ? 'New Taste Body'
+                      : (selectedIndex == 1)
+                          ? 'Popular Body'
+                          : 'Recommended Body';
+                  return Center(child: Text(body, style: blackFontStyle2));
+                }),
+                SizedBox(
+                  height:80,
+                )
+              ],
+            ),
+          )
         ])
       ],
     );
