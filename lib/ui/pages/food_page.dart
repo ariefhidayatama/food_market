@@ -40,12 +40,12 @@ class _FoodPageState extends State<FoodPage> {
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(8),
                             image: DecorationImage(
-                              image: NetworkImage(
-                                  'https://akcdn.detik.net.id/community/media/visual/2020/05/20/85bb6a5f-a309-4ab9-aebb-61f652ce7e8a_43.jpeg?w=700&q=80'),
-                                  fit: BoxFit.cover
-                            )))
-                  ]))
+                                image: NetworkImage(
+                                    'https://akcdn.detik.net.id/community/media/visual/2020/05/20/85bb6a5f-a309-4ab9-aebb-61f652ce7e8a_43.jpeg?w=700&q=80'),
+                                fit: BoxFit.cover)))
+                  ])),
           // List of Food
+          FoodCard(),
           // List of Food (Tabs)
         ])
       ],
